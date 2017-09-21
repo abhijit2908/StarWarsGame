@@ -1,0 +1,9 @@
+1)create four objects for characters.
+2)create 3 properties for each object:Health Points(HP), Attack Power(AP) and Counter Attack Power(CAP).
+3)create function to select your character.
+	-
+4)create function to move remaining to enemies.
+5)create function to select defender.
+6)create function to attack.
+7)create function to reset.
+
