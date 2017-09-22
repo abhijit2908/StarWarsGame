@@ -1,4 +1,5 @@
 var attackNum=0;
+var enemycount;
 var superHeroes={
 superman:{
 	Name:'Superman',
@@ -26,7 +27,7 @@ spiderman:{
 
 wonderwoman:{
 	Name:'WonderWoman',
-	healthPoints:12,
+	healthPoints:120,
 	attackPower:4,
 	counterattackPower:15,
 
@@ -74,6 +75,7 @@ $(document).ready (function(){
 
    		//.append(ops1)
    		$(".enemiesArea>button").prop("disabled",true);
+		$("Resulttext").empty();
    	});
 
 	});
@@ -93,12 +95,14 @@ $(document).ready (function(){
 		console.log(attackNum);
 
 		superHeroes[defenderName].healthPoints=superHeroes[defenderName].healthPoints - superHeroes[superheroName].attackPower * attackNum;
+		$("#Attacktext1").html("<p>you attacked " +superHeroes[defenderName].Name +" for " +superHeroes[superheroName].attackPower * attackNum + " points</p>");
 		
 
 		console.log( "Villian health points " + superHeroes[defenderName].healthPoints);
 		console.log("heroe attackPower " + superHeroes[superheroName].attackPower * attackNum );
 		
 		superHeroes[superheroName].healthPoints=superHeroes[superheroName].healthPoints - superHeroes[defenderName].counterattackPower;
+		$("#Attacktext2").html("<p>"+superHeroes[defenderName].Name+ " attacked you for " +superHeroes[defenderName].counterattackPower+ " points</p>");
 		
 
 		console.log("yourcharacter healthpoints " + superHeroes[superheroName].healthPoints);
@@ -107,10 +111,12 @@ $(document).ready (function(){
 		console.log;
 	
 		if((superHeroes[defenderName].healthPoints <= 0) && (superHeroes[superheroName].healthPoints > 0)){
-			$("#Attack").after("<p>" +superHeroes[superheroName].Name + " Wins!!!!!!. Please choose another Character to Fight</p>");
+			$("#Resulttext").html("<p>" +superHeroes[superheroName].Name + " Wins!!!!!!. Please choose another Character to Fight</p>");
 			console.log("yourcharacter" + superHeroes[superheroName].healthPoints);
 			$("#defenderArea>button").hide();
 			$(".enemiesArea>button").prop("disabled",false);
+			$("#Attacktext1").empty();
+			$("#Attacktext2").empty();
 			//$ (document.createElement('<button>Reset</button'));
 
 
@@ -124,23 +130,51 @@ $(document).ready (function(){
 			//superHeroes[defenderName].healthPoints;
 		}
 		 else if ( (superHeroes[superheroName].healthPoints <= 0) && (superHeroes[defenderName].healthPoints > 0)){
-		 	$("#Attack").after("<p>" +superHeroes[superheroName].Name + " has been defeated.plase Reset </p>");
-		 	$(document.createElement('button')).text("Reset").on("click",function(){
-		$("#defenderArea>button").show();
-		$("#yourCharacter>button").appendTo("#Charcontain");
-		$("#enemies>button").appendTo("#Charcontain").removeClass("enemiesArea").addClass("character");
-		$("#defenderArea>button").appendTo("#Charcontain").removeClass("enemiesArea").addClass("character");
-		$("#Attack").html("");
+		 	$("#Resulttext").html("<p>" +superHeroes[superheroName].Name + " has been defeated.please Reset </p>");
+			$("#Attack").hide();
+			console.log(superHeroes[superheroName].healthPoints);
+
+				console.log(superHeroes[defenderName].healthPoints);
+				console.log(superHeroes[defenderName].healthPoints);
+			var btn =document.createElement("BUTTON");
+			btn.id = 'Reset';
+			var t = document.createTextNode("Reset");
+			btn.appendChild(t)
+			document.body.appendChild(btn);
+			$("#Reset").on("click",function(){
+			$("#defenderArea>button").show();
+			$("#yourCharacter>button").appendTo("#Charcontain").removeClass("yourCharacter").addClass("character");
+			$("#enemies>button").appendTo("#Charcontain").removeClass("enemiesArea").addClass("character");
+			$("#defenderArea>button").appendTo("#Charcontain").removeClass("enemiesArea").addClass("character");
+			$("#Charcontain>button").prop("disabled",false);
+			$("#Attacktext1").empty();
+			$("#Attacktext2").empty();
+			$("#Resulttext").empty();
+			$('#Reset').remove();
+			$("#Attack").show();
+			console.log(superHeroes[superheroName].healthPoints);
+			console.log(superHeroes[defenderName].healthPoints);
+			attackNum=0;
+			superHeroes.superman.healthPoints=180;
+			superHeroes.batman.healthPoints=160;	
+			superHeroes.spiderman.healthPoints=140;
+			superHeroes.wonderwoman.healthPoints=120;
+			superHeroes.catwoman.healthPoints=100;
+			superHeroes.joker.healthPoints=90;
+		 	//$(document.createElement('button')).text("Reset").on("click",function(){
+		//$("#defenderArea>button").show();
+		//$("#yourCharacter>button").appendTo("#Charcontain");
+		//$("#enemies>button").appendTo("#Charcontain").removeClass("enemiesArea").addClass("character");
+		//$("#defenderArea>button").appendTo("#Charcontain").removeClass("enemiesArea").addClass("character");
+		//$("#Attack").html("");
 
 	});
-		 }
+		 };
 
 
 	});
+	
+	});
 
 
-
-
-
-});
 
