@@ -105,33 +105,33 @@ $(document).ready (function(){
 		//console.log(superHeroes[defenderName].healthPoints);
 		attackNum++;
 		
-		console.log(attackNum);
+		//console.log(attackNum);
 
 		superHeroes[defenderName].healthPoints=superHeroes[defenderName].healthPoints - superHeroes[superheroName].attackPower * attackNum;
 		$("#Attacktext1").html("<p>you attacked " +superHeroes[defenderName].Name +" for " +superHeroes[superheroName].attackPower * attackNum + " points</p>");
 		
 
-		console.log( "Villian health points " + superHeroes[defenderName].healthPoints);
-		console.log("heroe attackPower " + superHeroes[superheroName].attackPower * attackNum );
+		//console.log( "Villian health points " + superHeroes[defenderName].healthPoints);
+		//console.log("heroe attackPower " + superHeroes[superheroName].attackPower * attackNum );
 		
 		superHeroes[superheroName].healthPoints=superHeroes[superheroName].healthPoints - superHeroes[defenderName].counterattackPower;
 		$("#Attacktext2").html("<p>"+superHeroes[defenderName].Name+ " attacked you for " +superHeroes[defenderName].counterattackPower+ " points</p>");
 		
 
-		console.log("yourcharacter healthpoints " + superHeroes[superheroName].healthPoints);
-		console.log("Villian CAP " + superHeroes[defenderName].counterattackPower );
+		//console.log("yourcharacter healthpoints " + superHeroes[superheroName].healthPoints);
+		//console.log("Villian CAP " + superHeroes[defenderName].counterattackPower );
 		//console.log(typeof superHeroes[superheroName].healthPoints);
 		
 	
 		if((superHeroes[defenderName].healthPoints <= 0) && (superHeroes[superheroName].healthPoints > 0)){
 			$("#Resulttext").html("<p>" +superHeroes[superheroName].Name + " Wins!!!!!!. Please choose another Character to Fight</p>");
-			console.log("yourcharacter" + superHeroes[superheroName].healthPoints);
+			//console.log("yourcharacter" + superHeroes[superheroName].healthPoints);
 			$("#defenderArea>div").hide();
 			$(".enemiesArea>div").prop("disabled",false);
 			$("#Attacktext1").empty();
 			$("#Attacktext2").empty();
 			enemyCount--;
-   			console.log(enemyCount);
+   			//console.log(enemyCount);
    				if (enemyCount<0){
 		$("#Resulttext").html("<p>You have killed all your opponents.You are the strongest!!!!. Please Reset and Choose a new character and opponent </p>");
 		var btn =document.createElement("BUTTON");
@@ -150,8 +150,8 @@ $(document).ready (function(){
 			$("#Resulttext").empty();
 			$('#Reset').remove();
 			$("#Attack").show();
-			console.log(superHeroes[superheroName].healthPoints);
-			console.log(superHeroes[defenderName].healthPoints);
+			//console.log(superHeroes[superheroName].healthPoints);
+			//console.log(superHeroes[defenderName].healthPoints);
 			attackNum=0;
 			superHeroes.superman.healthPoints=180;
 			superHeroes.batman.healthPoints=160;	
@@ -177,10 +177,10 @@ $(document).ready (function(){
 		 else if ( (superHeroes[superheroName].healthPoints <= 0) && (superHeroes[defenderName].healthPoints > 0)){
 		 	$("#Resulttext").html("<p>" +superHeroes[superheroName].Name + " has been defeated by "+superHeroes[defenderName].Name+". Please Reset </p>");
 			$("#Attack").hide();
-			console.log(superHeroes[superheroName].healthPoints);
+			//console.log(superHeroes[superheroName].healthPoints);
 
-				console.log(superHeroes[defenderName].healthPoints);
-				console.log(superHeroes[defenderName].healthPoints);
+				//console.log(superHeroes[defenderName].healthPoints);
+				//console.log(superHeroes[defenderName].healthPoints);
 			var btn =document.createElement("BUTTON");
 			btn.id = 'Reset';
 			var t = document.createTextNode("Reset");
@@ -197,8 +197,8 @@ $(document).ready (function(){
 			$("#Resulttext").empty();
 			$('#Reset').remove();
 			$("#Attack").show();
-			console.log(superHeroes[superheroName].healthPoints);
-			console.log(superHeroes[defenderName].healthPoints);
+			//console.log(superHeroes[superheroName].healthPoints);
+			//console.log(superHeroes[defenderName].healthPoints);
 			attackNum=0;
 			superHeroes.superman.healthPoints=180;
 			superHeroes.batman.healthPoints=160;	
@@ -263,8 +263,8 @@ $(document).ready (function(){
 			$("#Resulttext").empty();
 			$('#Reset').remove();
 			$("#Attack").show();
-			console.log(superHeroes[superheroName].healthPoints);
-			console.log(superHeroes[defenderName].healthPoints);
+			//console.log(superHeroes[superheroName].healthPoints);
+			//console.log(superHeroes[defenderName].healthPoints);
 			attackNum=0;
 			superHeroes.superman.healthPoints=180;
 			superHeroes.batman.healthPoints=160;	
