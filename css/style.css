@@ -1,0 +1,75 @@
+body{
+	background-image: url('../images/backgroundImage.jpg');
+	height:100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background size: cover;
+	color:#FF0000!important;
+}
+#superMan{
+	background-color: #4080FF;
+	margin: 2px;
+	text-align: center;
+	font-weight: bolder;
+	color:#000000;
+
+}
+
+#batMan{
+	background-color: #4080FF;
+	margin: 2px;
+	text-align: center;
+	font-weight: bolder;
+	color:#000000;
+
+}
+#spiderMan{
+background-color: #4080FF;
+margin: 2px;
+text-align: center;
+font-weight: bolder;
+	color:#000000;
+}
+#wonderWoman{
+	background-color: #4080FF;
+	margin: 2px;
+	text-align: center;
+	font-weight: bolder;
+	color:#000000;
+
+}
+#catWoman{
+	background-color: #4080FF;
+	margin: 2px;
+	text-align: center;
+	font-weight: bolder;
+	color:#000000;
+
+}
+#joker{
+	background-color: #4080FF;
+	margin: 2px;
+text-align: center;
+font-weight: bolder;
+	color:#000000;
+}
+
+
+
+#Attacktext1{
+	color:#FF0000;
+	font-weight: bolder;
+
+}
+
+#Attacktext2{
+	color:#FF0000;
+	font-weight: bolder;
+
+}
+
+#Resulttext{
+	color:#FF0000;
+	font-weight: bolder;
+
+}

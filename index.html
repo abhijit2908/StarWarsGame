@@ -5,48 +5,92 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="javascript/game.js"></script>
+    <script src="javascript/game2.js"></script>
 </head>
 
 
 <body>
 
-
+<div class="container-fluid">
 <div class="row" id="Charcontain">
 
-    <button type="button" class="btn btn-primary character" id="superMan">SuperMan</button>
+<H1 class="col-md-12">Choose your Player</H1>
+    <div class="col-md-2 panel character" id="superMan">
+        <p class ="superheroname">SuperMan</p>
+        <img src="images/superman2.jpg" alt="Superman" width="200" height="150" id="super">
+        <p class="healthpoint"></p>
+    </div>
 
 
 
-    <button type="button" class="btn btn-success character" id="batMan">BatMan</button>
+    <div class="col-md-2 panel character" id="batMan">
+    <p class ="superheroname">BatMan</p>
+     <img src="images/Batman.jpg" alt="BatMan" width="200" height="150" id="bat">
+     <p class="healthpoint"></p>
+    </div>
 
 
 
-    <button type="button" class="btn btn-warning character" id="spiderMan">Spiderman</button>
+    <div class="col-md-2 panel character" id="spiderMan">
+    <p class ="superheroname">Spiderman</p>
+     <img src="images/spiderman.jpg" alt="SpiderMan" width="200" height="150" id="spider">
+     <p class="healthpoint"></p>
+    </div>
 
 
 
-    <button type="button" class="btn btn-primary character" id="wonderWoman">Wonderwoman</button>
-     <button type="button" class="btn btn-success character" id="catWoman">Catwoman</button>
+    <div class="col-md-2 panel character" id="wonderWoman">
+    <p class ="superheroname">Wonderwoman</p>
+     <img src="images/WonderWoman.jpg" alt="superman" width="200" height="150" id="wonder">
+     <p class="healthpoint"></p>
+    </div>
 
-    <button type="button" class="btn btn-danger character" id="joker">Joker</button>
+    <div class="col-md-2 panel character" id="catWoman">
+     <p class ="superheroname">Catwoman</p>
+      <img src="images/Catwoman.jpg" alt="superman" width="200" height="150" id="cat">
+      <p class="healthpoint"></p>
+     </div>
+
+    <div class="col-md-2 panel character" id="joker">
+    <p class ="superheroname">Joker</p>
+     <img src="images/joker.jpg" alt="superman" width="200" height="150" id="jok">
+     <p class="healthpoint"></p>
+    </div>
 
 
 </div>
-
-<div id="yourCharacter">YourCharacter</div>
-<div id="enemies" class="enemiesArea"> Enemies available to attack </div>
-<div id="defenderArea" class="defenderArea"> DefenderArea </div>
-
+<div class="row">
+<h3 class="col-md-12">Your Character</h3>
+</div>
+<div class="row">
+<div class= "col-md-12" id="yourCharacter"></div>
+</div>
+<div class="row">
+<h3 class="col-md-12">Enemies available to attack</h3>
+</div>
+<div class="row">
+<div id="enemies" class="col-md-12 enemiesArea "></div>
+</div>
+<div class="row">
+ <h3 class="col-md-12">DefenderArea</h3>
+ </div>
+ <div class="row">
+<div id="defenderArea" class="col-md-12 defenderArea"></div>
+</div>
 
 
 <button type="button" class="btn" id="Attack" >Attack</button>
-
+<div class="row">
 <div id="Attacktext1"></div>
+</div>
+<div class="row">
 <div id="Attacktext2"></div>
+</div>
+<div class="row">
 <div id="Resulttext"></div>
+</div>
 <!--<button type="button" class="btn" id="RestartGame">RestartGame</button>-->
-
+</div>
 
 </body>
 
