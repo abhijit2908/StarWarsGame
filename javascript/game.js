@@ -108,15 +108,15 @@ $(document).ready (function(){
 		//console.log(attackNum);
 
 		superHeroes[defenderName].healthPoints=superHeroes[defenderName].healthPoints - superHeroes[superheroName].attackPower * attackNum;
-		$("#Attacktext1").html("<p>you attacked " +superHeroes[defenderName].Name +" for " +superHeroes[superheroName].attackPower * attackNum + " points</p>");
-		
+		$("#Attacktext1").html("<p>"+superHeroes[superheroName].Name+ " attacked " +superHeroes[defenderName].Name +" for " +superHeroes[superheroName].attackPower * attackNum + " points</p>");
+		$("#Healthtext1").html("<p>" +superHeroes[defenderName].Name +" Health Left " +superHeroes[defenderName].healthPoints +"</p>");
 
 		//console.log( "Villian health points " + superHeroes[defenderName].healthPoints);
 		//console.log("heroe attackPower " + superHeroes[superheroName].attackPower * attackNum );
 		
 		superHeroes[superheroName].healthPoints=superHeroes[superheroName].healthPoints - superHeroes[defenderName].counterattackPower;
-		$("#Attacktext2").html("<p>"+superHeroes[defenderName].Name+ " attacked you for " +superHeroes[defenderName].counterattackPower+ " points</p>");
-		
+		$("#Attacktext2").html("<p>"+superHeroes[defenderName].Name+ " attacked "+ superHeroes[superheroName].Name+ " for " +superHeroes[defenderName].counterattackPower+ " points</p>");
+		$("#Healthtext2").html("<p>" +superHeroes[superheroName].Name +" Health Left " +superHeroes[superheroName].healthPoints+"</p>");
 
 		//console.log("yourcharacter healthpoints " + superHeroes[superheroName].healthPoints);
 		//console.log("Villian CAP " + superHeroes[defenderName].counterattackPower );
