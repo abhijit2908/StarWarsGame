@@ -6,6 +6,16 @@ body{
 	background size: cover;
 	color:#FF0000!important;
 }
+
+div.character:hover{
+	cursor:pointer;
+
+}
+
+div.enemiesArea:hover{
+	cursor:pointer;
+
+}
 #superMan{
 	background-color: #4080FF;
 	margin: 2px;
