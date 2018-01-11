@@ -35,7 +35,7 @@ When the defender's HP is reduced to zero or below, remove the enemy from the de
 
 ![GitHub Logo](defeat.PNG)
 
-![GitHub Logo](choose_next_player.PNG)
+
 
 * The player wins the game by defeating all enemy characters. 
 
@@ -52,4 +52,3 @@ When the defender's HP is reduced to zero or below, remove the enemy from the de
 
 ![GitHub Logo](loss.PNG)
 
-![GitHub Logo](reset.PNG)
